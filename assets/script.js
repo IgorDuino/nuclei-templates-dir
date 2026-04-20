@@ -150,7 +150,7 @@ function loadTop10() {
 }
 
 function genCommand(obj) {
-	var cmdTxt = "$ nuclei -u ",
+	var cmdTxt = "nuclei -u ",
 		path = obj.getAttribute("href").replace(`${blob}/`, "");
 
 	if (path.startsWith(`file/`)) {
@@ -210,7 +210,7 @@ function setCopySearchCommand(output) {
 	}
 
 	copySearchCommandBtn.innerText = "Copy nuclei command";
-	copySearchCommandBtn.setAttribute("data-command", `$ nuclei -u "URL" -id "${ids.join(",")}"`);
+	copySearchCommandBtn.setAttribute("data-command", `nuclei -u "URL" -id "${ids.join(",")}"`);
 	copySearchCommandBtn.style.display = "inline-block";
 }
 
