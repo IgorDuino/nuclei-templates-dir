@@ -201,9 +201,9 @@ function copyTextToClipboard(text) {
 }
 
 function setCopySearchCommand(output) {
-	let ids = [...new Set(output.map(e => e.id).filter(e => e != ""))];
+	let ids = [...new Set(output.map(e => e.id).filter(e => e !== ""))];
 
-	if (ids.length == 0) {
+	if (ids.length === 0) {
 		copySearchCommandBtn.style.display = "none";
 		copySearchCommandBtn.removeAttribute("data-command");
 		return
