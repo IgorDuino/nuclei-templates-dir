@@ -206,7 +206,7 @@ function setCopySearchCommand(output) {
 	if (ids.length === 0) {
 		copySearchCommandBtn.style.display = "none";
 		copySearchCommandBtn.removeAttribute("data-command");
-		return
+		return;
 	}
 
 	copySearchCommandBtn.innerText = "Copy nuclei command";
@@ -216,7 +216,7 @@ function setCopySearchCommand(output) {
 
 function copySearchCommand() {
 	let command = copySearchCommandBtn.getAttribute("data-command");
-	if (!command) return
+	if (!command) return;
 
 	copyTextToClipboard(command).then(() => {
 		copySearchCommandBtn.innerText = "Copied!";
